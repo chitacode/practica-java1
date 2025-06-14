@@ -16,8 +16,8 @@ else if (trampa ==="Oso Kodiak"){
   const respuesta = prompt("¿Tenes permiso de caza? (si / no)");
 
   if (respuesta === "si") {
-  alert("La Trampa se rompio !! el oso se dirije hacia ti");
-  let cazar = prompt("elegi una opcion: \n1-Huir \n2-Usar Rifle \n3-Pelear como tus ancestros mano a mano"); 
+  alert("La Trampa se rompio !! el oso se dirige hacia ti");
+  const cazar = prompt("elegi una opcion: \n1-Huir \n2-Usar Rifle \n3-Pelear como tus ancestros mano a mano"); 
     
   if (cazar == "1") {
         alert("Corriste como un cobarde!");

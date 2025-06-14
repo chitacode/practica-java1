@@ -6,7 +6,7 @@ body {
     padding: 0;
     color: #333;
     line-height: 1.6;
-    background-image: url('../forest.avif');
+    background-image: url("/images/forest.avif");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
