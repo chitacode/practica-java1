@@ -5,7 +5,7 @@ function trampear() {
   return opciones[Math.floor(Math.random() * opciones.length)];
 }
 
-function ponerTrampa(){ 
+function ponerTrampa() { 
 trampa = trampear(); 
 alert("Cazaste un " + trampa);
 
