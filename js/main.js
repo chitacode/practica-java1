@@ -1,8 +1,26 @@
 let trampa;
+let inventario = ["rifle", "cuchillo", "red", "tranquilizantes"];
 
 function trampear() {
   const opciones = ["Animal Nativo", "Sorongo, volve a intentarlo", "Oso Kodiak"];
   return opciones[Math.floor(Math.random() * opciones.length)];
+}
+
+function elegirArma() {
+  let mensaje = "Elige un arma de tu inventario:\n";
+  inventario.forEach((arma, index) => {
+    mensaje += `${index + 1} - ${arma}\n`; // 
+  });
+
+  const opcion = prompt(mensaje);
+  const armaElegida = inventario[parseInt(opcion) - 1]; // 
+
+  if (armaElegida) {
+    return armaElegida;
+  } else {
+    alert("¡No elegiste un arma válida! Usarás tus manos.");
+    return "manos";
+  }
 }
 
 function ponerTrampa() { 
@@ -17,28 +35,30 @@ else if (trampa ==="Oso Kodiak"){
 
   if (respuesta === "si") {
   alert("La Trampa se rompio !! el oso se dirige hacia ti");
-  const cazar = prompt("elegi una opcion: \n1-Huir \n2-Usar Rifle \n3-Pelear como tus ancestros mano a mano"); 
-    
-  if (cazar == "1") {
-        alert("Corriste como un cobarde!");
-      } else if (cazar == "2") {
+  const arma = elegirArma(); 
+
+    if (arma === "rifle") {
         alert("Disparaste tu rifle...hoy salen unas ricas milanesas de oso !!");
-      } else if (cazar == "3") {
-        alert("¡Combate épico! Pero terminaste en el Valhalla");
-      } else {
-        alert("Opción no válida");
+      } 
+      else if (arma === "cuchillo") {
+        alert("¡El oso te morfo, y uso el cuchillo de escarbadiente!");
       }
-     }
- 
-  else if (respuesta === "no") {
-  alert("Caza ilegal, estas en el horno!!!");
+      else if (arma === "red") {
+        alert("Lanzaste la red... pero el oso la rompió al instante. Salis corriendo ");
+      }
+      else if (arma === "tranquilizantes") {
+        alert("Le disparaste dardos.El oso antes de caer dormido, te rebana un pie. ");
+      }
+      else if (arma === "manos") {
+        alert("¡Peleaste como tus ancestros! Terminaste en el Valhalla.");
+      }
+    }
+    else if (respuesta === "no") {
+      alert("Caza ilegal, estas en el horno!!!");
+    }
+    else {
+      alert("Respuesta no válida");
+    }
   }
-  else {
-  alert("Respuesta no válida");
-  }
- }
 }
 
-
-
-   
